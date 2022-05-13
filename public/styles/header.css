@@ -1,9 +1,15 @@
 header {
-  height: 400px;
-  width: 100vw;
+  border: 5px solid black;
+  height: 550px;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  background-color: aqua;
+  background-color: rgb(8,230,231);
   background-image: url("../images/axiom-pattern.png");
+  flex-direction: column;
+}
+
+.header-image {
+  border: 5px solid black;
 }
