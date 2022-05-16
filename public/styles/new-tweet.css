@@ -1,5 +1,5 @@
 .new-tweet {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -50,4 +50,8 @@ button {
   display: flex;
   justify-content: flex-end;
   font-family: 'Bungee', cursive;
+}
+
+::placeholder {
+  font-weight: bold;
 }

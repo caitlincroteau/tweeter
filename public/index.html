@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -40,7 +41,7 @@
       </div>
     </div>
     </nav>
-    <header>
+    <header class="main-header">
       <div class="header-image">
           <img src="/images/profile-hex.png"> 
       </div>
@@ -52,6 +53,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
@@ -63,6 +65,28 @@
           </div>
         </form>
       </section>
+
+      <section class="tweets">
+        <article class="tweet">
+          <header>
+            <div class="tweet-header-item-multi">
+              <img src="https://i.imgur.com/73hZDYK.png">
+              <div>Newton</div>
+            </div>
+            <div class="tweet-header-item">@SirIsaac</div>
+          </header>
+          <p>Twas brillig, and the slithy toves, did gyre and gimble in the wabe!</p>
+          <footer>
+            <div>10 days ago</div>
+            <div class="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+
     </main>
 
     </main>

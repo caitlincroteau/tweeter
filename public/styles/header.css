@@ -1,5 +1,4 @@
-header {
-  border: 5px solid black;
+.main-header {
   height: 550px;
   width: 100%;
   display: flex;
