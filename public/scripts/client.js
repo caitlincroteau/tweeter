@@ -32,7 +32,10 @@ $(document).ready(function() {
       url: "/tweets",
       method: "POST",
       data: $("#tweet-text").serialize()
-    }).then(loadtweets)
+    }).then(function () {
+      $("#tweets-container").empty()
+      loadtweets()
+    })
   
   };
   
