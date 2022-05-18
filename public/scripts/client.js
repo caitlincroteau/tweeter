@@ -6,7 +6,8 @@
 
 $(document).ready(function() {
 
-// Fake data taken from initial-tweets.json
+
+  // Fake data taken from initial-tweets.json
   const data = [
     {
       "user": {
@@ -32,52 +33,66 @@ $(document).ready(function() {
     }
   ]
 
-// createTweetElement function: takes in a tweet object; returns a tweet <article> element containing the entire HTML structure of the tweet.
+  //event handler for submit action (related to the form element/not to the button element)
+  const handleSubmit = event => {
+    event.preventDefault();
+    //console.log($("#tweet-text").serialize())
+    
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $("#tweet-text").serialize()
+    })
+  
+  };
+  
+  //submit takes 'event' argument by default - don't have to explicitly write (event)
+  $("#tweet-form").submit(handleSubmit);
 
-const createTweetElement = function(tweet) {
-  const user = tweet.user;
-  const avatar = user.avatars;
-  const name = user.name;
-  const handle = user.handle;
-  const content = tweet.content.text;
-  const timestamp = tweet.created_at;
-
-  const $tweet = $(`<article class="tweet">
-          <header>
-            <div class="tweet-header-item-multi">
-              <img src="${avatar}">
-              <div>${name}</div>
-            </div>
-            <div class="tweet-header-item">${handle}</div>
-          </header>
-          <p>${content}</p>
-          <footer>
-            <div>${timestamp}</div>
-            <div class="icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article>`);
-
-  return $tweet;
-};
-
-
-//renderTweets function: takes in an array of tweet objects and appends each one to the #tweets-container.
-
-const renderTweets = function(tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-  for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
-  }
-};
-
-renderTweets(data);
+  // createTweetElement function: takes in a tweet object; returns a tweet <article> element containing the entire HTML structure of the tweet.
+  const createTweetElement = function(tweet) {
+    const user = tweet.user;
+    const avatar = user.avatars;
+    const name = user.name;
+    const handle = user.handle;
+    const content = tweet.content.text;
+    const timestamp = tweet.created_at;
+  
+    const $tweet = $(`<article class="tweet">
+            <header>
+              <div class="tweet-header-item-multi">
+                <img src="${avatar}">
+                <div>${name}</div>
+              </div>
+              <div class="tweet-header-item">${handle}</div>
+            </header>
+            <p>${content}</p>
+            <footer>
+              <div>${timestamp}</div>
+              <div class="icons">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </footer>
+          </article>`);
+  
+    return $tweet;
+  };
+  
+  //renderTweets function: takes in an array of tweet objects and appends each one to the #tweets-container.
+  
+  const renderTweets = function(tweets) {
+    // loops through tweets
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+    for (let tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').append($tweet);
+    }
+  };
+  
+  renderTweets(data)
 
 /*
 
