@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   };
 
-  // loadtweets();
+  loadtweets();
   
   //event handler for submit action (related to the form element/not to the button element)
   const handleSubmit = event => {
@@ -50,6 +50,7 @@ $(document).ready(function() {
     const handle = user.handle;
     const content = tweet.content.text;
     const timestamp = tweet.created_at;
+    const formattedTimestamp = timeago.format(timestamp);
   
     const $tweet = $(`<article class="tweet">
             <header>
@@ -61,7 +62,7 @@ $(document).ready(function() {
             </header>
             <p>${content}</p>
             <footer>
-              <div>${timestamp}</div>
+              <div>${formattedTimestamp}</div>
               <div class="icons">
                 <i class="fa-solid fa-flag"></i>
                 <i class="fa-solid fa-retweet"></i>
