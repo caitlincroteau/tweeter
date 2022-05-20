@@ -5,15 +5,17 @@ $(document).ready(function() {
     let characters = $(this).val();
     let currentCharacters = maxCharacters - characters.length;
 
-    const parent = $("textarea").parent();
+    const parent = $(this).parent();
     let counter = $(parent).find("output.counter");
     counter.text(currentCharacters);
 
     if (counter.text() < 0) {
       counter.css("color", "red");
-    } else {
-      counter.css("color", "black");
+      return
     }
+    
+    counter.css("color", "black");
+
   });
 });
 
