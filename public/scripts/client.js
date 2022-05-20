@@ -22,12 +22,14 @@ $(document).ready(function() {
   };
 
   //loads tweets hardcoded in initial DB
-  loadtweets();
+  //loadtweets();
   
   //event handler for submit action (related to the form element/not to the button element)
   const handleSubmit = event => {
     event.preventDefault();
-    const tweetText = $("#tweet-text").serialize();
+    const tweetText = $("#tweet-text").serialize()
+    // const safeText = $("tweet-text")
+    // console.log("Tweet text:", safeText)
 
     if (tweetText === "" || tweetText === null || tweetText === "text=") {
       window.alert("Cannot submit an empty tweet.")
@@ -63,6 +65,9 @@ $(document).ready(function() {
     const content = tweet.content.text;
     const timestamp = tweet.created_at;
     const formattedTimestamp = timeago.format(timestamp);
+
+    const safeContent = escape(content);
+    // console.log("this is safe content:", safeContent, "type of:", typeof safeContent)
   
     const $tweet = $(`<article class="tweet">
             <header>
@@ -72,7 +77,7 @@ $(document).ready(function() {
               </div>
               <div class="tweet-header-item">${handle}</div>
             </header>
-            <p>${content}</p>
+            <p>${safeContent}</p>
             <footer>
               <div>${formattedTimestamp}</div>
               <div class="icons">
@@ -85,6 +90,14 @@ $(document).ready(function() {
   
     return $tweet;
   };
+
+  //function to prevent cross-site scripting (XSS)
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+  
   
   //renderTweets function: takes in an array of tweet objects and appends each one to the #tweets-container.
   
@@ -94,12 +107,11 @@ $(document).ready(function() {
     // takes return value and appends it to the tweets container
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
     
     // console.log(document.getElementById("tweets-container").textContent)
   };
-
 
 
   
