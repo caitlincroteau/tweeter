@@ -19,7 +19,9 @@ $(document).ready(function () {
       renderTweets(tweets);
     })
 
-    $("#tweet-form")[0].reset()
+    $("#tweet-form")[0].reset();
+    $(".counter").val("140");
+    //is this formatted correctly??
 
   };
 
@@ -29,43 +31,41 @@ $(document).ready(function () {
   //event handler for submit action (related to the form element/not to the button element)
   const handleSubmit = function (event) {
     event.preventDefault();
-    const tweetText = $("#tweet-text").val()
+    const tweetText = $("#tweet-text").val();
 
-    // const safeText = $("tweet-text")
-    // console.log("Tweet text:", safeText)
 
+    //checks for null and empty string
     if (!tweetText) {
-      // window.alert("Cannot submit an empty tweet.")
       $("#error-message").slideUp("slow", function () {
         // Animation complete.
       })
       $("#error-message").slideDown("slow", function () {
         // Animation complete.
       });
-      return
+      return;
     }
-
+    
+    //checks character length
     if ((tweetText.length) > 140) {
-      console.log(tweetText.length)
-      //window.alert("Your tweet exceeds the maximum character limit.");
       $("#error-message").slideUp("slow", function () {
         // Animation complete.
       })
       $("#error-message").slideDown("slow", function () {
         // Animation complete.
       });
-      return
+      return;
     }
 
+    //ensures there is no error message when posting a validated tweet
     $("#error-message").slideUp("slow", function () {
       // Animation complete.
     })
-
+    
+    //seralize data before sending it
     const form = $(this);
-    console.log("form", form)
     const data = form.serialize();
-    console.log("form serialized", form)
-
+    
+    //post request
     $.ajax({
       url: "/tweets",
       method: "POST",
@@ -91,9 +91,9 @@ $(document).ready(function () {
     const timestamp = tweet.created_at;
     const formattedTimestamp = timeago.format(timestamp);
 
+    //prevent XXS
     const safeContent = escape(content);
-    // console.log("this is safe content:", safeContent, "type of:", typeof safeContent)
-
+    
     const $tweet = $(`<article class="tweet">
             <header>
               <div class="tweet-header-item-multi">
@@ -121,27 +121,19 @@ $(document).ready(function () {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
-
+  };
 
   //renderTweets function: takes in an array of tweet objects and appends each one to the #tweets-container.
-
   const renderTweets = function (tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
     $("#tweets-container").empty()
 
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet);
     }
-
-    // console.log(document.getElementById("tweets-container").textContent)
   };
 
-
-
+});
 
 
 
@@ -168,7 +160,9 @@ $(document).ready(function () {
   */
 
 
-});
+
+
+
 
 
 // Fake data taken from initial-tweets.json
