@@ -55,3 +55,27 @@ button {
 ::placeholder {
   font-weight: bold;
 }
+
+.error-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid;
+	margin: 20px auto;
+	padding: 15px 15px 15px 15px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	max-width: 460px;
+  display: none;
+}
+
+ .error  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px 0px 20px;
+  
+} 
