@@ -8,9 +8,8 @@
 
 $(document).ready(function() {
 
-
+  //loads tweets in tweet-container
   const loadtweets = function() {
-    // console.log("render tweets",renderTweets)
     $.ajax({
       url: "/tweets",
       method: "GET",
@@ -22,20 +21,29 @@ $(document).ready(function() {
 
   };
 
+  //loads tweets hardcoded in initial DB
   loadtweets();
   
   //event handler for submit action (related to the form element/not to the button element)
   const handleSubmit = event => {
     event.preventDefault();
-    
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: $("#tweet-text").serialize()
-    }).then(function () {
-      $("#tweets-container").empty()
-      loadtweets()
-    })
+    const tweetText = $("#tweet-text").serialize();
+
+    if (tweetText === "" || tweetText === null || tweetText === "text=") {
+      window.alert("Cannot submit an empty tweet.")
+    } else if ((tweetText.length - 5) > 140) {
+      console.log(tweetText.length)
+      window.alert("Your tweet exceeds the maximum character limit.");
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: tweetText
+      }).then(function () {
+        $("#tweets-container").empty()
+        loadtweets();
+      })
+    }
   
   };
   
@@ -47,6 +55,7 @@ $(document).ready(function() {
 
   // createTweetElement function: takes in a tweet object; returns a tweet <article> element containing the entire HTML structure of the tweet.
   const createTweetElement = function(tweet) {
+   
     const user = tweet.user;
     const avatar = user.avatars;
     const name = user.name;
