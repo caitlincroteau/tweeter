@@ -19,10 +19,12 @@ $(document).ready(function() {
       renderTweets(tweets);
     })
 
+    $("#tweet-form")[0].reset()
+
   };
 
   //loads tweets hardcoded in initial DB
-  //loadtweets();
+  loadtweets();
   
   //event handler for submit action (related to the form element/not to the button element)
   const handleSubmit = event => {
@@ -32,11 +34,27 @@ $(document).ready(function() {
     // console.log("Tweet text:", safeText)
 
     if (tweetText === "" || tweetText === null || tweetText === "text=") {
-      window.alert("Cannot submit an empty tweet.")
+      // window.alert("Cannot submit an empty tweet.")
+      $( "#error-message" ).slideUp( "slow", function() {
+        // Animation complete.
+      })
+      $( "#error-message" ).slideDown( "slow", function() {
+          // Animation complete.
+        });
     } else if ((tweetText.length - 5) > 140) {
       console.log(tweetText.length)
-      window.alert("Your tweet exceeds the maximum character limit.");
+      //window.alert("Your tweet exceeds the maximum character limit.");
+      $( "#error-message" ).slideUp( "slow", function() {
+        // Animation complete.
+      })
+      $( "#error-message" ).slideDown( "slow", function() {
+        // Animation complete.
+      });
     } else {
+      $( "#error-message" ).slideUp( "slow", function() {
+        // Animation complete.
+      })
+
       $.ajax({
         url: "/tweets",
         method: "POST",
@@ -45,8 +63,11 @@ $(document).ready(function() {
         $("#tweets-container").empty()
         loadtweets();
       })
+    
+
     }
-  
+    
+    
   };
   
   //submit takes 'event' argument by default - don't have to explicitly write (event)
