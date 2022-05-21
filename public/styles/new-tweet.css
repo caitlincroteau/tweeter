@@ -56,10 +56,9 @@ button {
   font-weight: bold;
 }
 
-#error-message {
-  display: flex;
+.error-message {
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   color: #D8000C;
   background-color: #FFBABA;
@@ -68,14 +67,16 @@ button {
 	padding: 15px 15px 15px 15px;
 	background-repeat: no-repeat;
 	background-position: 10px center;
-	max-width: 460px;
+	/* max-width: 460px; */
   display: none;
 }
 
  .error  {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 50px 0px 20px;
+  padding: 0px 50px 0px 10px;
   
 } 
+
+.fa-exclamation-triangle {
+  padding: 0px 10px 0px 50px;
+
+}

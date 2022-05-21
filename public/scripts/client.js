@@ -4,8 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const { json } = require("express/lib/response");
-
 $(document).ready(function () {
 
   //loads tweets in tweet-container
@@ -36,29 +34,26 @@ $(document).ready(function () {
 
     //checks for null and empty string
     if (!tweetText) {
-      $("#error-message").slideUp("slow", function () {
-        // Animation complete.
+      $("#error").slideUp("slow", function () {
+        $("span.error").text("Error: Tweet field cannot be left blank. Please enter tweet content.")
       })
-      $("#error-message").slideDown("slow", function () {
-        // Animation complete.
+      $("#error").slideDown("slow", function () {
       });
       return;
     }
     
     //checks character length
     if ((tweetText.length) > 140) {
-      $("#error-message").slideUp("slow", function () {
-        // Animation complete.
+      $("#error").slideUp("slow", function () {
+        $("span.error").text("Error: Cannot exceed max of 140 characters.")   
       })
-      $("#error-message").slideDown("slow", function () {
-        // Animation complete.
+      $("#error").slideDown("slow", function () {
       });
       return;
     }
 
     //ensures there is no error message when posting a validated tweet
-    $("#error-message").slideUp("slow", function () {
-      // Animation complete.
+    $("#error").slideUp("slow", function () {
     })
     
     //seralize data before sending it
