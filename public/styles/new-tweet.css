@@ -23,7 +23,7 @@ form {
   border: 0;
   border-bottom: 5px solid black;
   width: 90%;
-  height: 40px;
+  height: 90px;
   resize: none;
 
 }
@@ -57,9 +57,6 @@ button {
 }
 
 .error-message {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   color: #D8000C;
   background-color: #FFBABA;
   border: 1px solid;
@@ -67,7 +64,6 @@ button {
 	padding: 15px 15px 15px 15px;
 	background-repeat: no-repeat;
 	background-position: 10px center;
-	/* max-width: 460px; */
   display: none;
 }
 
