@@ -16,15 +16,8 @@ nav {
   display: flex;
   flex-direction: row;
   font-family: 'Bungee', cursive;
-  font-size: 36px;
-}
-
-.nav-item {
-  padding-bottom: 0.5em;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
-
 .nav-item-multi {
   height:90%;
   padding-top: 1em;
@@ -33,6 +26,13 @@ nav {
   align-items: center;
   
 }
+
+.nav-item {
+  padding-bottom: 0.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+}
+
 
 .nav-icon {
   --fa-bounce-start-scale-x: 1;
