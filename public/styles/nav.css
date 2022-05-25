@@ -12,15 +12,35 @@ nav {
   position: fixed;
  }
 
-.nav-item {
+.brand {
   display: flex;
   flex-direction: row;
   font-family: 'Bungee', cursive;
+  font-size: 36px;
+}
+
+.nav-item {
+  padding-bottom: 0.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
 }
 
 .nav-item-multi {
+  height:90%;
+  padding-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Bungee', cursive;
+  
+}
+
+.nav-icon {
+  --fa-bounce-start-scale-x: 1;
+  --fa-bounce-start-scale-y: 1;
+  --fa-bounce-jump-scale-x: 1;
+  --fa-bounce-jump-scale-y: 1;
+  --fa-bounce-land-scale-x: 1;
+  --fa-bounce-land-scale-y: 1;
+  --fa-bounce-rebound: 0;
+  color: red;
 }
