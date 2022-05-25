@@ -9,6 +9,19 @@
   flex-direction: column;
 }
 
-.header-image {
+/* .header-image {
   border: 5px solid black;
+} */
+
+.header-name {
+  color: white;
+  margin-bottom: 1em;
+} 
+
+.header-name h2 {
+  font-weight: 300;
+}
+
+.header-name h2 strong {
+  font-weight: 600;
 }

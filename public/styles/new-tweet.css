@@ -11,10 +11,10 @@ form {
   justify-content: center;
 }
 
-.new-tweet h2 {
+/* .new-tweet h2 {
   display: flex;
   justify-content: flex-start;
-}
+} */
 
 #tweet-text {
   display: flex;
@@ -52,8 +52,15 @@ button {
   font-family: 'Bungee', cursive;
 }
 
-::placeholder {
+/* ::placeholder {
   font-weight: bold;
+} */
+
+label {
+  font-weight: bold;
+  width: 90%;
+  margin-top: 2em;
+
 }
 
 .error-message {
