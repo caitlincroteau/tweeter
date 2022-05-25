@@ -95,3 +95,18 @@ article.tweet footer {
 
 }
 
+@media only screen and (max-width: 650px) {
+  article.tweet header {
+    flex-direction: column;
+  }
+
+  .tweet-header-item-multi {
+    width: 100%;
+  }
+
+  .tweet-header-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
