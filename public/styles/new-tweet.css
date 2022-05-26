@@ -18,7 +18,6 @@ form {
   border: 0;
   border-bottom: 5px solid black;
   width: 90%;
-  height: 90px;
   resize: none;
 }
 
@@ -60,7 +59,7 @@ label {
   font-weight: bold;
   width: 90%;
   margin-top: 2em;
-
+  padding-bottom: 0.5em;
 }
 
 .error-message {
