@@ -1,5 +1,5 @@
 .main-header {
-  height: 550px;
+  height: 475px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -9,13 +9,13 @@
   flex-direction: column;
 }
 
-/* .header-image {
-  border: 5px solid black;
-} */
+.header-image {
+  padding-top: 2em;
+}
 
 .header-name {
   color: white;
-  margin-bottom: 1em;
+  padding-bottom: 1em;
 } 
 
 .header-name h2 {
@@ -30,6 +30,7 @@
 
 @media only screen and (min-width: 1024px) {
   .main-header {
+    height: 400px;
     justify-content: center;
     width: 32%;
     float: left;
@@ -37,5 +38,4 @@
     margin-left: 2%;
     margin-right: 1%;
   }
-
 }

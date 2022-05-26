@@ -1,7 +1,6 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
   padding-left: 1.5em;
@@ -16,12 +15,11 @@ nav {
 .brand {
   display: flex;
   font-family: 'Bungee', cursive;
-  font-size: 24px;
+  font-size: 30px;
   height: 90%;
   justify-content: center;
   align-items: flex-start;
   padding-right: 2em;
-  margin-bottom: 0.5;
 }
 
 .nav-item-multi {
@@ -49,4 +47,10 @@ nav {
   --fa-bounce-land-scale-y: 1;
   --fa-bounce-rebound: 0;
   color: red;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
 }
