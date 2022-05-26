@@ -31,12 +31,15 @@ nav {
   
 }
 
+.nav-item-multi:hover {
+  cursor: pointer;
+}
+
 .nav-item {
   padding-bottom: 0.5em;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
-
 
 .nav-icon {
   --fa-bounce-start-scale-x: 1;
@@ -48,6 +51,8 @@ nav {
   --fa-bounce-rebound: 0;
   color: #D70040;
 }
+
+
 
 @media only screen and (min-width: 1024px) {
   nav {

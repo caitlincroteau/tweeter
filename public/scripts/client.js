@@ -11,6 +11,19 @@ $(document).ready(function () {
   //loads tweets hardcoded in initial DB
   loadtweets();
 
+
+  // $( ".nav-icon" ).click(function() {
+  //   alert( "Handler for .click() called." );
+  // });
+
+  $( ".nav-item-multi" ).click(function() {
+    $( "#tweet-form" ).toggle( "slow", function() {
+      $("#tweet-text").focus();
+      // Animation complete.
+    });
+    // $( "#tweet-form" ).show();
+  });
+
 });
 
 //loads tweets in tweet-container

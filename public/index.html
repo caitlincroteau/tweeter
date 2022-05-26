@@ -63,7 +63,8 @@
           <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
           <span class="error"></span>
         </div>
-        <form id="tweet-form" method="POST">
+
+        <form hidden id="tweet-form" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" row="1"></textarea>
           <div class="small-container">
@@ -71,6 +72,7 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+
       </section>
       
       <section class="tweets" id="tweets-container">
