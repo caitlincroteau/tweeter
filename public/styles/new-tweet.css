@@ -31,6 +31,12 @@ button {
   font-family: 'Bungee', cursive;
 }
 
+button:hover {
+  border-color:#4056A1;
+  box-shadow:0 0 10px #4056A1;
+  cursor: pointer;
+}
+
 .small-container {
   display: flex;
   flex-direction: row;
