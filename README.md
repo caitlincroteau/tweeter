@@ -6,6 +6,11 @@ Starter code for the project was provided by Lighthouse Labs. I built upon it to
 
 The code I wrote for this project is found mainly in the public directory (scripts and styles directories, index.html file).
 
+## Writing a Tweet
+
+!["Animated GIF of writing a tweet"]("https://github.com/caitlincroteau/tweeter/docs/tweeter-writing-tweet.gif")
+
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
@@ -18,6 +23,9 @@ The code I wrote for this project is found mainly in the public directory (scrip
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
+- Chance
+- md5
 
 ## Using Tweeter
 
