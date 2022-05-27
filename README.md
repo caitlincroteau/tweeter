@@ -8,7 +8,7 @@ The code I wrote for this project is found mainly in the public directory (scrip
 
 ## Writing a Tweet
 
-!["Animated GIF of writing a tweet"]("https://github.com/caitlincroteau/tweeter/docs/tweeter-writing-tweet.gif")
+!["Animated GIF of writing a tweet"]("https://github.com/caitlincroteau/tweeter/blob/master/docs/tweeter-writing-tweet.gif")
 
 
 ## Getting Started
