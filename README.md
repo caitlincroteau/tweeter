@@ -8,6 +8,19 @@ The code I wrote for this project is found mainly in the public directory (scrip
 
 ## Getting Started
 
+1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
+2. Clone your repository onto your local device.
+3. Install dependencies using the `npm install` command.
+3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+4. Go to <http://localhost:8080/> in your browser.
+
+## Dependencies
+
+- Express
+- Node 5.10.x or above
+
+## Using Tweeter
+
 Click on the "Write a new tweet" button in the top right corner. A tweet form will slide down.
 
 Input your content and press the tweet button. Tweets will appear in reverse chronological order.
@@ -16,7 +29,3 @@ Tweets cannot exceed 140 characters and cannot be empty.
 
 A two column design is set for desktop screens (1024px wide and larger) and a one column design for tablets and phones. Individual tweets have responsive content for devices with screens under 650px wide.
 
-## Dependencies
-
-- Express
-- Node 5.10.x or above
