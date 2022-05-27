@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  //counter
   $('#tweet-text').on("input", function() {
     const maxCharacters = 140;
     let characters = $(this).val();
@@ -13,8 +14,16 @@ $(document).ready(function() {
       counter.css("color", "red");
       return
     }
-    
+
     counter.css("color", "black");
+  });
+
+  //Compose tweet button
+  $( ".nav-item-multi" ).click(function() {
+    $( "#tweet-form" ).slideToggle( "slow", function() {
+      $("#tweet-text").focus();
+
+    });
 
   });
 });

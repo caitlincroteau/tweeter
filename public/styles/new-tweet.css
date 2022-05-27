@@ -51,9 +51,7 @@ button:hover {
   font-family: 'Bungee', cursive;
 }
 
-/* ::placeholder {
-  font-weight: bold;
-} */
+
 
 label {
   font-weight: bold;
@@ -71,15 +69,12 @@ label {
 	background-repeat: no-repeat;
 	background-position: 10px center;
   display: none;
+  text-align: center;
 }
 
- .error  {
-  padding: 0px 50px 0px 10px;
-  
-  
-} 
 
 .fa-exclamation-triangle {
-  padding: 0px 10px 0px 50px;
-
+  padding-right: 5px;
 }
+
+

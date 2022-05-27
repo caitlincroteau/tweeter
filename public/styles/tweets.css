@@ -71,9 +71,9 @@ article.tweet footer {
 .icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: #4056A1;
-  width: 15%;
+  width: 30%;
   cursor: pointer;
 }
 
@@ -109,5 +109,13 @@ article.tweet footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+
+  article.tweet footer {
+    flex-direction: column;
+  }
+
+  .icons {
+    margin-top: 1em;
   }
 }

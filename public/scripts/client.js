@@ -11,19 +11,6 @@ $(document).ready(function () {
   //loads tweets hardcoded in initial DB
   loadtweets();
 
-
-  // $( ".nav-icon" ).click(function() {
-  //   alert( "Handler for .click() called." );
-  // });
-
-  $( ".nav-item-multi" ).click(function() {
-    $( "#tweet-form" ).toggle( "slow", function() {
-      $("#tweet-text").focus();
-      // Animation complete.
-    });
-    // $( "#tweet-form" ).show();
-  });
-
 });
 
 //loads tweets in tweet-container
@@ -53,8 +40,7 @@ const handleSubmit = function (event) {
   //checks for null and empty string
   if (!tweetText) {
     $("#error").slideUp("slow", function () {
-      // $("#error").css({"display": "flex"})
-      $("span.error").text("Error: Tweet field cannot be left blank. Please enter tweet content.")
+      $("span.error").text("Error: Tweet field cannot be left blank. Please enter tweet content.")   
     })
     $("#error").slideDown("slow", function () {
     });
@@ -64,7 +50,7 @@ const handleSubmit = function (event) {
   //checks character length
   if ((tweetText.length) > 140) {
     $("#error").slideUp("slow", function () {
-      $("span.error").text("Error: Cannot exceed max of 140 characters.")
+      $("span.error").text("Error: Tweet must be shorter than 140 characters.")
     })
     $("#error").slideDown("slow", function () {
     });
