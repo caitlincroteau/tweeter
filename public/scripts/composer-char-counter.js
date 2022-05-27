@@ -12,27 +12,17 @@ $(document).ready(function() {
 
     if (counter.text() < 0) {
       counter.css("color", "red");
-      return
+      return;
     }
 
     counter.css("color", "black");
   });
 
   //Compose tweet button
-  $( ".nav-item-multi" ).click(function() {
-    $( "#tweet-form" ).slideToggle( "slow", function() {
+  $(".nav-item-multi").click(function() {
+    $("#tweet-form").slideToggle("slow", function() {
       $("#tweet-text").focus();
-
     });
-
   });
-});
-
-
-// const tweetText = document.getElementById("tweet-text");
-
-// tweetText.addEventListener("input", (event) => {
-//   console.log(event);
-//   console.log("An input event has happened!");
   
-// });
+});
