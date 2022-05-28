@@ -41,5 +41,6 @@ A two column design is set for desktop screens (1024px wide and larger) and a on
 
 !["Animated GIF of writing a tweet"](https://github.com/caitlincroteau/tweeter/blob/master/docs/tweeter-writing-tweet.gif?raw=true)
 
+## Responsive Design
 !["Animated GIF of responsive design"](https://github.com/caitlincroteau/tweeter/blob/master/docs/tweeter-responsive-design.gif?raw=true)
 
