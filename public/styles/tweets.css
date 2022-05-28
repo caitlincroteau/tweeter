@@ -4,7 +4,6 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-
 }
 
 .tweet {
@@ -15,7 +14,6 @@
   border: 5px solid black;
   width: 90%;
   margin-top: 2em;
-  
 }
 
 .tweet:hover {
@@ -33,14 +31,13 @@ article.tweet header {
 
 .tweet-header-item {
   color: plum;
-
 }
+
 .tweet-header-item-multi {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 article.tweet img {
@@ -53,7 +50,6 @@ article.tweet p {
   justify-content: flex-start;
   font-weight: bold;
   padding: 1em;
-  
 }
 
 article.tweet footer {
@@ -65,7 +61,6 @@ article.tweet footer {
   border-top: 5px solid black;
   padding: 1em;
   padding-bottom: 2em;
-
 }
 
 .icons {
@@ -77,24 +72,22 @@ article.tweet footer {
   cursor: pointer;
 }
 
-
 .fa-flag:hover {
   color: #E1AD01;
   transition: 0.7s;
-
 }
 
 .fa-retweet:hover {
   color: #E1AD01;
   transition: 0.7s;
-
 }
 
 .fa-heart:hover {
   color: #E1AD01;
   transition: 0.7s;
-
 }
+
+/* EXTRA SMALL SCREEN STYLES */
 
 @media only screen and (max-width: 650px) {
   article.tweet header {

@@ -51,8 +51,6 @@ button:hover {
   font-family: 'Bungee', cursive;
 }
 
-
-
 label {
   font-weight: bold;
   width: 90%;
@@ -71,7 +69,6 @@ label {
   display: none;
   text-align: center;
 }
-
 
 .fa-exclamation-triangle {
   padding-right: 5px;
