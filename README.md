@@ -6,7 +6,9 @@ Starter code for the project was provided by Lighthouse Labs. I built upon it to
 
 The code I wrote for this project is found mainly in the public directory (scripts and styles directories, index.html file).
 
-!["Screenshot of desktop Tweeter"](https://github.com/caitlincroteau/tweeter/blob/master/docs/tweeter-desktop.png) !["Screenshot of mobile Tweeter"](https://github.com/caitlincroteau/tweeter/blob/master/docs/tweeter-mobile.png)
+Desktop | Mobile
+--- | ---
+!["Screenshot of desktop Tweeter"](https://github.com/caitlincroteau/tweeter/blob/master/docs/tweeter-desktop.png) | !["Screenshot of mobile Tweeter"](https://github.com/caitlincroteau/tweeter/blob/master/docs/tweeter-mobile.png)
 
 
 ## Getting Started
