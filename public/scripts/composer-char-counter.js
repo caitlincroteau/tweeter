@@ -18,7 +18,7 @@ $(document).ready(function() {
     counter.css("color", "black");
   });
 
-  //Compose tweet button
+  //compose tweet button
   $(".nav-item-multi").click(function() {
     $("#tweet-form").slideToggle("slow", function() {
       $("#tweet-text").focus();
